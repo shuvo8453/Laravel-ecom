@@ -43,11 +43,11 @@ Route::get('/checkout',CheckoutComponent::class);
 
 
 //For User or Customer 
-Route::middleware(['auth:sanctm',config('jetstream.auth_session'),'verified','authuser'])->group(function(){
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified'])->group(function(){
     Route::get('/user/dashboard',UserDashboardComponent::class)->name('user.dashboard');
 });
 
 //For Admin
-Route::middleware(['auth:sanctm',config('jetstream.auth_session'),'verified','authadmin'])->group(function(){
+Route::middleware(['auth:sanctum',config('jetstream.auth_session'),'verified','authadmin'])->group(function(){
     Route::get('/admin/dashboard',AdminDashboardComponent::class)->name('admin.dashboard');
 });
