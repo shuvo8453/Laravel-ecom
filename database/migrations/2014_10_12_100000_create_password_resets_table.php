@@ -20,6 +20,8 @@ class CreatePasswordResetsTable extends Migration
         });
     }
 
+    // some
+
     /**
      * Reverse the migrations.
      *
